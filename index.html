@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Job Mela – Find Latest Jobs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-wrap">
+    <h1 class="logo">Job Mela</h1>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="govt.html">Government Jobs</a>
+      <a href="private.html">Private Jobs</a>
+    </nav>
+  </div>
+</header>
+
+<section class="updated-top">
+  <div class="container">
+    <p class="updated-text">
+      Last Updated: <span id="lastUpdated"></span>
+    </p>
+  </div>
+</section>
+
+<script>
+  const now = new Date();
+  const formatted = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+  document.getElementById("lastUpdated").innerText = formatted;
+</script>
+
+
+<section class="hero">
+  <div class="container">
+    <p class="welcome-text">
+      Welcome to Job Mela — a clean and simple place to find the right job opening for you.
+      Explore the latest private and government opportunities across India.
+    </p>
+  </div>
+</section>
+
+<section class="job-section">
+  <div class="container">
+    <h2 class="section-title">Latest Job Openings</h2>
+
+    <!-- Mixed Job Card 1 -->
+    <div class="job-card">
+      <div class="job-head">
+        <h3>SSC GD Constable Recruitment 2025</h3>
+        <span class="tag">Govt</span>
+      </div>
+      <p>Vacancies: 26,000+</p>
+      <p>Last Date: 31 Jan 2025</p>
+      <a class="btn" href="#">View Details</a>
+    </div>
+
+    <!-- Mixed Job Card 2 -->
+    <div class="job-card">
+      <div class="job-head">
+        <h3>TCS Hiring – Freshers 2025</h3>
+        <span class="tag">Private</span>
+      </div>
+      <p>Role: Digital / IT</p>
+      <p>Location: PAN India</p>
+      <a class="btn" href="#">Apply Now</a>
+    </div>
+
+    <!-- Mixed Job Card 3 -->
+    <div class="job-card">
+      <div class="job-head">
+        <h3>UPSC Civil Services Notification 2025</h3>
+        <span class="tag">Govt</span>
+      </div>
+      <p>Vacancies: 1,000 (expected)</p>
+      <p>Last Date: 28 Feb 2025</p>
+      <a class="btn" href="#">View Details</a>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  © 2025 Job Mela — Your daily source of job opportunities
+</footer>
+
+</body>
+</html>

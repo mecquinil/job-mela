@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Government Jobs – Job Mela</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="logo">JOB MELA</h1>
+  </div>
+</header>
+
+<section class="updated-top">
+  <div class="container">
+    <p class="updated-text">
+      Last Updated: <span id="lastUpdated"></span>
+    </p>
+  </div>
+</section>
+
+<script>
+  const now = new Date();
+  const formatted = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+  document.getElementById("lastUpdated").innerText = formatted;
+</script>
+
+
+<section class="hero">
+  <div class="container">
+    <h2 class="section-title" style="border:none; text-align:center; margin-top:20px;">
+      Latest Government Job Openings
+    </h2>
+    </div>
+</section>
+
+<section class="job-section">
+  <div class="container">
+
+    <!-- Job Card 1 -->
+    <div class="job-card">
+      <div class="job-head">
+        <h3>SSC GD Constable Recruitment 2025</h3>
+        <span class="tag">Govt</span>
+      </div>
+      <p>Vacancies: 26,000+</p>
+      <p>Last Date: 31 Jan 2025</p>
+      <a class="btn" href="#">View Details</a>
+    </div>
+
+    <!-- Job Card 2 -->
+    <div class="job-card">
+      <div class="job-head">
+        <h3>UPSC Civil Services Examination 2025</h3>
+        <span class="tag">Govt</span>
+      </div>
+      <p>Vacancies: 1,000 (expected)</p>
+      <p>Last Date: 28 Feb 2025</p>
+      <a class="btn" href="#">View Details</a>
+    </div>
+
+    <!-- Job Card 3 -->
+    <div class="job-card">
+      <div class="job-head">
+        <h3>Railway RRB Technician 2025</h3>
+        <span class="tag">Govt</span>
+      </div>
+      <p>Vacancies: 12,000</p>
+      <p>Last Date: 15 Mar 2025</p>
+      <a class="btn" href="#">View Details</a>
+    </div>
+
+  </div>
+</section>
+<footer class="site-footer">
+  © 2025 Job Mela — Government Jobs Page
+</footer>
+
+</body>
+</html>

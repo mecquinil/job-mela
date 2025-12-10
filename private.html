@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Private Jobs – Job Mela</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="logo">JOB MELA</h1>
+  </div>
+</header>
+
+<section class="updated-top">
+  <div class="container">
+    <p class="updated-text">
+      Last Updated: <span id="lastUpdated"></span>
+    </p>
+  </div>
+</section>
+
+<script>
+  const now = new Date();
+  const formatted = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+  document.getElementById("lastUpdated").innerText = formatted;
+</script>
+
+
+<section class="hero">
+  <div class="container">
+    <h2 class="section-title" style="border:none; text-align:center; margin-top:20px;">
+      Latest Private Job Openings
+    </h2>
+
+    <p class="welcome-text">
+      Fresh opportunities from top companies across India.  
+      Explore trending IT, non-IT, management, and tech roles.
+    </p>
+  </div>
+</section>
+
+<section class="job-section">
+  <div class="container">
+
+    <!-- Job Card 1 -->
+    <div class="job-card">
+      <div class="job-head">
+        <h3>TCS Hiring – Freshers 2025</h3>
+        <span class="tag">Private</span>
+      </div>
+      <p>Role: Digital / IT</p>
+      <p>Location: PAN India</p>
+      <a class="btn" href="#">Apply Now</a>
+    </div>
+
+    <!-- Job Card 2 -->
+    <div class="job-card">
+      <div class="job-head">
+        <h3>Infosys Off Campus 2025</h3>
+        <span class="tag">Private</span>
+      </div>
+      <p>Role: Systems Engineer</p>
+      <p>Location: Bengaluru</p>
+      <a class="btn" href="#">Apply Now</a>
+    </div>
+
+    <!-- Job Card 3 -->
+    <div class="job-card">
+      <div class="job-head">
+        <h3>Wipro Turbo Hiring 2025</h3>
+        <span class="tag">Private</span>
+      </div>
+      <p>Role: Project Engineer</p>
+      <p>Location: Hyderabad / Pune</p>
+      <a class="btn" href="#">Apply Now</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  © 2025 Job Mela — Private Jobs Page
+</footer>
+
+</body>
+</html>
