@@ -1,10 +1,15 @@
 /* ========= GLOBAL ========= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 
 body {
   background: #fff;
@@ -79,49 +84,63 @@ body {
 
 /* ========= JOB CARDS ========= */
 .job-card {
-  border: 2px solid #000;
-  padding: 25px;
-  margin-bottom: 25px;
-  transition: 0.2s ease-in-out;
+    border: 1px solid #000;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background: #fff;
+    transition: all 0.2s ease-in-out;
 }
 
 .job-card:hover {
-  transform: translateY(-3px);
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 0px #000;
 }
 
 .job-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .job-head h3 {
-  font-size: 20px;
-  font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+    font-weight: 600;
 }
 
 .tag {
-  padding: 4px 10px;
-  border: 2px solid #000;
-  font-size: 13px;
-  font-weight: 600;
+    background: #000;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
+.job-card p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 
 /* ========= BUTTON ========= */
 .btn {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 10px 18px;
-  border: 2px solid #000;
-  text-decoration: none;
-  color: #000;
-  font-weight: 600;
-  transition: 0.2s;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.2s;
 }
 
 .btn:hover {
-  background: #000;
-  color: #fff;
+    background: #000;
+    color: #fff;
 }
 
 /* ========= FOOTER ========= */
@@ -202,4 +221,13 @@ body {
   font-weight: 600;
   opacity: 0.8;
   letter-spacing: 0.3px;
+}
+@media (max-width: 600px) {
+    .job-card {
+        padding: 15px;
+    }
+    
+    .job-head h3 {
+        font-size: 18px;
+    }
 }
