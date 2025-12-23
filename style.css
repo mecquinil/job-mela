@@ -25,11 +25,11 @@ body {
 }
 
 .logo {
-  font-size: 48px;
-  font-weight: 950;
-  letter-spacing: 1px;
-  text-align: center;
-  text-transform: none; /* ensures it stays 'Job Mela', not uppercase */
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: #000;
 }
 
 
