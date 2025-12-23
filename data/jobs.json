@@ -1,5 +1,6 @@
 [
   {
+    "id":1,
     "title": "SSC GD Constable Recruitment 2025",
     "category": "Govt",
     "last_date": "2025-01-31",
@@ -8,6 +9,7 @@
     "link": "https://ssc.gov.in"
   },
   {
+    "id": 2,
     "title": "UPSC Civil Services Examination 2025",
     "category": "Govt",
     "last_date": "2025-02-28",
@@ -16,6 +18,7 @@
     "link": "https://upsc.gov.in"
   },
   {
+    "id":3,
     "title": "TCS Hiring — Freshers 2025",
     "category": "Private",
     "last_date": "2025-02-10",
@@ -24,6 +27,7 @@
     "link": "https://www.tcs.com/careers"
   },
   {
+    "id":4,
     "title": "Infosys Off Campus 2025",
     "category": "Private",
     "last_date": "2025-03-15",

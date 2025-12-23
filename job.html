@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">Job Mela</a>
+</header>
+
+<section class="job-details">
+    <div class="container">
+        
+        <h1 id="jobTitle">Loading...</h1>
+
+        <div class="job-meta-box" id="jobMetaBox">
+            <!-- Filled by JS -->
+        </div>
+
+        <div class="details-divider"></div>
+
+        <p id="jobDescription"></p>
+
+        <div class="apply-section">
+            <a id="applyBtn" class="apply-btn" target="_blank">Apply Now</a>
+        </div>
+
+    </div>
+</section>
+
+<script>
+// Get ID from URL
+const params = new URLSearchParams(window.location.search);
+const jobId = params.get("id");
+
+async function loadJobDetails() {
+    const res = await fetch("data/jobs.json?v=" + Date.now());
+    const jobs = await res.json();
+
+    const job = jobs[jobs.findIndex(j => j.id == jobId)];
+
+    if (!job) {
+        document.body.innerHTML = "<h2>Job not found</h2>";
+        return;
+    }
+
+    // Fill content
+    document.getElementById("jobTitle").innerText = job.title;
+   document.getElementById("jobMetaBox").innerHTML = `
+    <div><strong>Category:</strong> ${job.category}</div>
+    <div><strong>Location:</strong> ${job.location}</div>
+    <div><strong>Last Date:</strong> ${job.last_date}</div>
+`;
+    document.getElementById("jobDescription").innerText = job.description;
+    document.getElementById("applyBtn").href = job.link;
+}
+
+loadJobDetails();
+</script>
+
+</body>
+</html>

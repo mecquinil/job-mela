@@ -89,6 +89,45 @@
 <footer class="site-footer">
   © 2025 Job Mela — Private Jobs Page
 </footer>
+<script>
+async function loadPrivateJobs() {
+  try {
+    const res = await fetch('data/jobs.json?v=' + Date.now());
+    const jobs = await res.json();
+
+    const container = document.querySelector('.job-section .container');
+    const titleEl = container.querySelector('.section-title');
+
+    // Remove old job cards
+    Array.from(container.children).forEach((el) => {
+      if (el !== titleEl) el.remove();
+    });
+
+    // Filter only private jobs
+    const privateJobs = jobs.filter(job => job.category.toLowerCase() === "private");
+
+    privateJobs.forEach(job => {
+      const card = document.createElement('div');
+      card.className = 'job-card';
+      card.innerHTML = `
+        <div class="job-head">
+          <h3>${job.title}</h3>
+          <span class="tag">${job.category}</span>
+        </div>
+        <p>${job.location ? job.location + ' • ' : ''} ${job.last_date ? 'Last Date: ' + job.last_date : ''}</p>
+        <p>${job.description}</p>
+        <a class="btn" href="job.html?id=${job.id}">View Details</a>
+      `;
+      container.appendChild(card);
+    });
+
+  } catch (error) {
+    console.error("Error loading private jobs:", error);
+  }
+}
+
+window.addEventListener('DOMContentLoaded', loadPrivateJobs);
+</script>
 
 </body>
 </html>
