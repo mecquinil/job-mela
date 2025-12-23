@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "title": "SSC GD Constable Recruitment 2025",
+    "category": "Govt",
+    "last_date": "2025-01-31",
+    "location": "India",
+    "description": "26,000+ vacancies. Apply online before deadline.",
+    "link": "https://ssc.gov.in"
+  },
+  {
+    "title": "UPSC Civil Services Examination 2025",
+    "category": "Govt",
+    "last_date": "2025-02-28",
+    "location": "India",
+    "description": "Preliminary exam expected in May 2025.",
+    "link": "https://upsc.gov.in"
+  },
+  {
+    "title": "TCS Hiring — Freshers 2025",
+    "category": "Private",
+    "last_date": "2025-02-10",
+    "location": "PAN India",
+    "description": "Hiring for Digital and IT roles.",
+    "link": "https://www.tcs.com/careers"
+  },
+  {
+    "title": "Infosys Off Campus 2025",
+    "category": "Private",
+    "last_date": "2025-03-15",
+    "location": "Bangalore",
+    "description": "Systems Engineer roles for freshers.",
+    "link": "https://infy.com"
+  }
+]
