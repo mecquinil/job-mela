@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Details</title>
+
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,11 +18,14 @@
 
 <section class="job-details">
     <div class="container">
-        
+
         <h1 id="jobTitle">Loading...</h1>
 
-        <div class="job-meta-box" id="jobMetaBox">
-            <!-- Filled by JS -->
+        <!-- Metadata table -->
+        <div class="job-meta-table-wrapper">
+            <table class="job-meta-table" id="jobMetaTable">
+                <!-- Filled by JS -->
+            </table>
         </div>
 
         <div class="details-divider"></div>
@@ -48,14 +55,29 @@ async function loadJobDetails() {
         return;
     }
 
-    // Fill content
+    // Title
     document.getElementById("jobTitle").innerText = job.title;
-   document.getElementById("jobMetaBox").innerHTML = `
-    <div><strong>Category:</strong> ${job.category}</div>
-    <div><strong>Location:</strong> ${job.location}</div>
-    <div><strong>Last Date:</strong> ${job.last_date}</div>
-`;
+
+    // Metadata table
+    document.getElementById("jobMetaTable").innerHTML = `
+        <tr>
+            <td>Category</td>
+            <td>${job.category}</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td>${job.location}</td>
+        </tr>
+        <tr>
+            <td>Last Date</td>
+            <td>${job.last_date}</td>
+        </tr>
+    `;
+
+    // Description
     document.getElementById("jobDescription").innerText = job.description;
+
+    // Apply button
     document.getElementById("applyBtn").href = job.link;
 }
 

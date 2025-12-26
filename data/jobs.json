@@ -3,6 +3,7 @@
     "id": 1,
     "title": "BEML Recruitment – HR Executives",
     "category": "Govt",
+    "experience": "Experienced",
     "location": "India",
     "last_date": "07-01-2026",
     "description": "BEML Limited invites applications for Officer HR and Assistant Manager HR posts.",
@@ -12,18 +13,19 @@
     "id": 2,
     "title": "TCS Off Campus Hiring – Freshers 2025",
     "category": "Private",
+    "experience": "Freshers",
     "location": "PAN India",
     "last_date": "31-01-2025",
     "description": "TCS is hiring freshers for multiple roles across India.",
     "link": "https://www.tcs.com/careers"
   },
-
-   {
-     "id":3,
+  {
+    "id": 3,
     "title": "SSC GD Constable Recruitment 2025",
     "category": "Govt",
-    "last_date": "2025-01-31",
+    "experience": "Freshers",
     "location": "India",
+    "last_date": "2025-01-31",
     "description": "26,000+ vacancies. Apply online before deadline.",
     "link": "https://ssc.gov.in"
   },
@@ -31,26 +33,29 @@
     "id": 4,
     "title": "UPSC Civil Services Examination 2025",
     "category": "Govt",
-    "last_date": "2025-02-28",
+    "experience": "Freshers",
     "location": "India",
+    "last_date": "2025-02-28",
     "description": "Preliminary exam expected in May 2025.",
     "link": "https://upsc.gov.in"
   },
   {
-    "id":5,
+    "id": 5,
     "title": "TCS Hiring — Freshers 2025",
     "category": "Private",
-    "last_date": "2025-02-10",
+    "experience": "Freshers",
     "location": "PAN India",
+    "last_date": "2025-02-10",
     "description": "Hiring for Digital and IT roles.",
     "link": "https://www.tcs.com/careers"
   },
   {
-    "id":6,
+    "id": 6,
     "title": "Infosys Off Campus 2025",
     "category": "Private",
-    "last_date": "2025-03-15",
+    "experience": "Freshers",
     "location": "Bangalore",
+    "last_date": "2025-03-15",
     "description": "Systems Engineer roles for freshers.",
     "link": "https://infy.com"
   }

@@ -333,3 +333,277 @@ body {
         padding: 12px 24px;
     }
 }
+/* ------------------------------
+   JOB DETAILS PAGE (PREMIUM UI)
+--------------------------------*/
+.job-details {
+    padding: 80px 0;
+    background: #f5f5f5;
+}
+
+.job-details .container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 16px;
+    padding: 50px 60px;
+    box-shadow: 6px 6px 0px #000;
+}
+
+/* Title */
+.job-details h1 {
+    font-size: 38px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+/* Metadata table wrapper */
+.job-meta-table-wrapper {
+    margin-bottom: 30px;
+    border: 2px solid #000;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* Table styling */
+.job-meta-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.job-meta-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.job-meta-table td {
+    padding: 14px 16px;
+    font-size: 16px;
+}
+
+.job-meta-table td:first-child {
+    width: 180px;
+    font-weight: 600;
+    background: #f7f7f7;
+    border-right: 1px solid #ddd;
+}
+
+.job-meta-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Divider */
+.details-divider {
+    margin: 25px 0;
+    height: 2px;
+    background: #000;
+}
+
+/* Description */
+#jobDescription {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+/* Apply button section */
+.apply-section {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.apply-btn {
+    padding: 14px 28px;
+    border: 2px solid #000;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    color: #000;
+    transition: 0.25s;
+}
+
+.apply-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .job-details .container {
+        padding: 30px 20px;
+    }
+
+    .job-details h1 {
+        font-size: 28px;
+    }
+
+    #jobDescription {
+        font-size: 15px;
+    }
+
+    .apply-btn {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
+
+/* Back to Home Button */
+.back-home {
+    max-width: 1100px;
+    margin: 20px auto 10px;
+    padding: 0 20px;
+}
+
+.back-home a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.back-home a:hover {
+    background: #000;
+    color: #fff;
+}
+
+
+
+/* Top bar: Back button + Last updated */
+.top-bar {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Back to Home button (reuse existing styles) */
+.back-home a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.back-home a:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Last updated text */
+.last-updated {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .last-updated {
+        font-size: 13px;
+    }
+}
+/* FIX top bar alignment */
+.top-bar {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* OVERRIDE old back-home centering */
+.top-bar .back-home {
+    margin: 0;          /* <-- THIS is the key fix */
+    padding: 0;
+}
+
+/* Back button style */
+.top-bar .back-home a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.top-bar .back-home a:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Last updated */
+.top-bar .last-updated {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+@media (max-width: 600px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+
+/* Filter bar */
+.filter-bar {
+    max-width: 1100px;
+    margin: 20px auto 30px;
+    padding: 0 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.filter-btn.active {
+    background: #000;
+    color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .filter-bar {
+        flex-wrap: wrap;
+    }
+}
