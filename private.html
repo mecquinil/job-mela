@@ -41,10 +41,6 @@
       Latest Private Job Openings
     </h2>
 
-    <p class="welcome-text">
-      Fresh opportunities from top companies across India.  
-      Explore trending IT, non-IT, management, and tech roles.
-    </p>
   </div>
 </section>
 
@@ -68,14 +64,15 @@
 
 <script>
 /* ===============================
-   FILTER FIX — ONLY CHANGES BELOW
+   ONLY REQUIRED CHANGES BELOW
 ================================ */
 
 let privateJobsCache = [];
 
 async function loadPrivateJobs() {
   try {
-    const res = await fetch('data/jobs.json?v=' + Date.now());
+    // CHANGED: fetch private-only JSON
+    const res = await fetch('data/private-jobs.json?v=' + Date.now());
     const jobs = await res.json();
 
     const container = document.querySelector('.job-section .container');
@@ -83,19 +80,16 @@ async function loadPrivateJobs() {
     // Remove old job cards
     container.querySelectorAll('.job-card').forEach(el => el.remove());
 
-    // Filter only private jobs
-    const privateJobs = jobs.filter(job => job.category.toLowerCase() === "private");
+    // CHANGED: no category filtering needed anymore
+    privateJobsCache = jobs;
 
-    // CACHE FOR FILTERING
-    privateJobsCache = privateJobs;
-
-    privateJobs.forEach(job => {
+    privateJobsCache.forEach(job => {
       const card = document.createElement('div');
       card.className = 'job-card';
       card.innerHTML = `
         <div class="job-head">
           <h3>${job.title}</h3>
-          <span class="tag">${job.category}</span>
+          <span class="tag">Private</span>
         </div>
         <p>${job.location ? job.location + ' • ' : ''} ${job.last_date ? 'Last Date: ' + job.last_date : ''}</p>
         <p>${job.description}</p>
@@ -111,7 +105,7 @@ async function loadPrivateJobs() {
 
 window.addEventListener('DOMContentLoaded', loadPrivateJobs);
 
-/* FIXED FILTER LOGIC */
+/* EXISTING FILTER LOGIC — UNCHANGED */
 const filterButtons = document.querySelectorAll(".filter-btn");
 
 filterButtons.forEach(btn => {
@@ -131,17 +125,16 @@ filterButtons.forEach(btn => {
         : privateJobsCache.filter(job => job.experience === filter);
 
     // Remove old "No jobs found" message if exists
-const oldMsg = container.querySelector(".no-jobs-msg");
-if (oldMsg) oldMsg.remove();
+    const oldMsg = container.querySelector(".no-jobs-msg");
+    if (oldMsg) oldMsg.remove();
 
-if (jobsToShow.length === 0) {
-  const msg = document.createElement("p");
-  msg.className = "no-jobs-msg";
-  msg.innerText = "No jobs found.";
-  container.appendChild(msg);
-  return;
-}
-
+    if (jobsToShow.length === 0) {
+      const msg = document.createElement("p");
+      msg.className = "no-jobs-msg";
+      msg.innerText = "No jobs found.";
+      container.appendChild(msg);
+      return;
+    }
 
     jobsToShow.forEach(job => {
       const card = document.createElement('div');
@@ -149,7 +142,7 @@ if (jobsToShow.length === 0) {
       card.innerHTML = `
         <div class="job-head">
           <h3>${job.title}</h3>
-          <span class="tag">${job.category}</span>
+          <span class="tag">Private</span>
         </div>
         <p>${job.location ? job.location + ' • ' : ''} ${job.last_date ? 'Last Date: ' + job.last_date : ''}</p>
         <p>${job.description}</p>

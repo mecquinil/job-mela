@@ -10,7 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
-
 <body>
 
 <header class="site-header">
@@ -42,8 +41,7 @@
 <section class="hero">
   <div class="container">
     <p class="welcome-text">
-      Welcome to Job Mela — a clean and simple place to find the right job opening for you.
-      Explore the latest private and government opportunities across India.
+      Welcome to Job Mela — A clean and minimalist job listing platform
     </p>
   </div>
 </section>
@@ -66,16 +64,13 @@
 
 <script>
 /* ===============================
-   FILTER FIX — ONLY CHANGES BELOW
+   ONLY REQUESTED CHANGES BELOW
 ================================ */
 
 let jobsCache = [];
 
 async function loadJobs() {
   try {
-    const res = await fetch('data/jobs.json?v=' + Date.now());
-    const jobs = await res.json();
-
     const container = document.querySelector('.job-section .container');
     const titleEl = container.querySelector('.section-title');
 
@@ -84,10 +79,22 @@ async function loadJobs() {
       if (el !== titleEl) el.remove();
     });
 
-    // CACHE ALL JOBS
-    jobsCache = jobs;
+    // Fetch govt jobs
+    const govtRes = await fetch('data/govt-jobs.json?v=' + Date.now());
+    const govtJobs = await govtRes.json();
 
-    jobs.forEach(job => {
+    // Fetch private jobs
+    const privateRes = await fetch('data/private-jobs.json?v=' + Date.now());
+    const privateJobs = await privateRes.json();
+
+    // Take latest 2 from each
+    const latestGovt = govtJobs.slice(0, 2);
+    const latestPrivate = privateJobs.slice(0, 2);
+
+    // Combine for home page
+    jobsCache = [...latestGovt, ...latestPrivate];
+
+    jobsCache.forEach(job => {
       const card = document.createElement('div');
       card.className = 'job-card';
       card.innerHTML = `
@@ -109,7 +116,7 @@ async function loadJobs() {
 
 window.addEventListener('DOMContentLoaded', loadJobs);
 
-/* FIXED FILTER LOGIC */
+/* EXISTING FILTER LOGIC — UNTOUCHED */
 const filterButtons = document.querySelectorAll(".filter-btn");
 
 filterButtons.forEach(btn => {
@@ -119,9 +126,7 @@ filterButtons.forEach(btn => {
 
     const filter = btn.dataset.filter;
     const container = document.querySelector('.job-section .container');
-    const titleEl = container.querySelector('.section-title');
 
-    // Clear existing job cards
     container.querySelectorAll('.job-card').forEach(card => card.remove());
 
     const jobsToShow =
@@ -129,18 +134,16 @@ filterButtons.forEach(btn => {
         ? jobsCache
         : jobsCache.filter(job => job.experience === filter);
 
-    // Remove old "No jobs found" message if exists
-const oldMsg = container.querySelector(".no-jobs-msg");
-if (oldMsg) oldMsg.remove();
+    const oldMsg = container.querySelector(".no-jobs-msg");
+    if (oldMsg) oldMsg.remove();
 
-if (jobsToShow.length === 0) {
-  const msg = document.createElement("p");
-  msg.className = "no-jobs-msg";
-  msg.innerText = "No jobs found.";
-  container.appendChild(msg);
-  return;
-}
-
+    if (jobsToShow.length === 0) {
+      const msg = document.createElement("p");
+      msg.className = "no-jobs-msg";
+      msg.innerText = "No jobs found.";
+      container.appendChild(msg);
+      return;
+    }
 
     jobsToShow.forEach(job => {
       const card = document.createElement('div');

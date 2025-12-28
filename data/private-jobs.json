@@ -1,0 +1,252 @@
+[
+  {
+    "id": "TCS25012026",
+    "title": "TCS Atlas Hiring – January 2026",
+    "category": "Private",
+    "experience": "Freshers",
+    "location": "Pan India",
+    "last_date": "25-01-2026",
+    "description": "TCS is hiring 2026 batch graduates with M.Sc/M.A in Math, Statistics, or Economics.",
+    "link": "https://www.tcs.com/careers/india/tcs-atlas-hiring"
+  },
+  {
+    "id": "TCS01022026",
+    "title": "TCS iON NQT – February 2026 Cycle",
+    "category": "Private",
+    "experience": "Freshers",
+    "location": "Pan India",
+    "last_date": "01-02-2026",
+    "description": "National Qualifier Test for entry-level roles in IT and Business Process Services.",
+    "link": "https://www.tcsion.com/hub/national-qualifier-test/"
+  },
+  {
+    "id": "INF15012026",
+    "title": "Infosys – Specialist Programmer (L1/L2/L3)",
+    "category": "Private",
+    "experience": "Freshers",
+    "location": "India",
+    "last_date": "15-01-2026",
+    "description": "High-end technical hiring for the 2026 batch focusing on coding and algorithmic skills.",
+    "link": "https://www.infosys.com/careers/"
+  },
+  {
+    "id": "INF15012026",
+    "title": "Infosys – Digital Specialist Engineer",
+    "category": "Private",
+    "experience": "Freshers",
+    "location": "India",
+    "last_date": "15-01-2026",
+    "description": "Entry-level role for engineering graduates in digital transformation and cloud services.",
+    "link": "https://www.infosys.com/careers/"
+  },
+  {
+    "id": "HCL12012026",
+    "title": "HCLTech – Test Automation Engineer",
+    "category": "Private",
+    "experience": "Experienced",
+    "location": "Pune, India",
+    "last_date": "12-01-2026",
+    "description": "Seeking automation experts with 4-12 years of experience in Selenium and Java.",
+    "link": "https://careers.hcltech.com/"
+  },
+  {
+    "id": "HCL12012026",
+    "title": "HCLTech – Java Developer",
+    "category": "Private",
+    "experience": "Experienced",
+    "location": "Bangalore, India",
+    "last_date": "12-01-2026",
+    "description": "Recruiting mid-level developers with 3-7 years of experience in Spring Boot and Microservices.",
+    "link": "https://careers.hcltech.com/"
+  },
+  {
+    "id": "AMA26012026",
+    "title": "Amazon – Associate, ML Data Operations",
+    "category": "Private",
+    "experience": "Experienced",
+    "location": "Bangalore / Virtual",
+    "last_date": "26-01-2026",
+    "description": "Role involves enabling automation for robotics; requires 1-3 years of relevant experience.",
+    "link": "https://www.amazon.jobs/en/locations/india"
+  },
+  {
+    "id": "AMA15012026",
+    "title": "Amazon – Remote Customer Service Associate",
+    "category": "Private",
+    "experience": "Freshers",
+    "location": "Virtual (Work from Home)",
+    "last_date": "15-01-2026",
+    "description": "Entry-level customer support role for handling order and payment queries.",
+    "link": "https://jobs.amazon.in/virtual-customer-service-associate"
+  },
+  {
+    "id": "FLI12012026",
+    "title": "Flipkart – Data Scientist",
+    "category": "Private",
+    "experience": "Experienced",
+    "location": "Bangalore, India",
+    "last_date": "12-01-2026",
+    "description": "Requires 3+ years in machine learning and statistical modeling for supply chain.",
+    "link": "https://www.flipkartcareers.com/"
+  },
+  {
+    "id": "ACC31122025",
+    "title": "Accenture – Application Development Associate",
+    "category": "Private",
+    "experience": "Freshers",
+    "location": "Pan India",
+    "last_date": "31-12-2025",
+    "description": "Mega hiring drive for the 2025/2026 batch of engineering graduates.",
+    "link": "https://www.accenture.com/in-en/careers"
+  },
+  {
+    "id": "COG23012026",
+    "title": "Cognizant – Product Consultant (TriZetto)",
+    "category": "Private",
+    "experience": "Experienced",
+    "location": "Hyderabad, India",
+    "last_date": "23-01-2026",
+    "description": "Senior role requiring 10+ years in healthcare payer systems and NetworX.",
+    "link": "https://careers.cognizant.com/india-en/"
+  },
+  {
+    "id": "GOG10012026",
+    "title": "Google – Software Engineer III (Cloud)",
+    "category": "Private",
+    "experience": "Experienced",
+    "location": "Bengaluru, India",
+    "last_date": "10-01-2026",
+    "description": "Mid-level software role requiring 2+ years of experience with distributed systems.",
+    "link": "https://www.google.com/about/careers/"
+  },
+  {
+    "id": "IBM11012026",
+    "title": "IBM – Associate System Engineer",
+    "category": "Private",
+    "experience": "Freshers",
+    "location": "Multiple Cities, India",
+    "last_date": "11-01-2026",
+    "description": "Entry-level technical role focusing on hybrid cloud and software maintenance.",
+    "link": "https://www.ibm.com/in-en/employment/"
+  },
+  {
+    "id": "WIP31012026",
+    "title": "Wipro – Project Engineer (Elite NTH)",
+    "category": "Private",
+    "experience": "Freshers",
+    "location": "Pan India",
+    "last_date": "31-01-2026",
+    "description": "Wipro's annual hiring drive for engineering graduates across diverse streams.",
+    "link": "https://careers.wipro.com/"
+  },
+  {
+    "id": "QUA12022026",
+    "title": "Quadwave – AI Engineer Intern",
+    "category": "Private",
+    "experience": "Freshers",
+    "location": "Bengaluru, Karnataka",
+    "last_date": "12-02-2026",
+    "description": "Full-time internship focusing on AI model development and deployment.",
+    "link": "https://www.tcsion.com/job-openings/"
+  },
+  {
+    "id": "SIG21012026",
+    "title": "Signiwis – Java Developer",
+    "category": "Private",
+    "experience": "Experienced",
+    "location": "Bengaluru, Karnataka",
+    "last_date": "21-01-2026",
+    "description": "Seeking Java developers with 2-5 years of experience in enterprise applications.",
+    "link": "https://www.tcsion.com/job-openings/"
+  },
+  {
+    "id": "KFI18012026",
+    "title": "KFin Technologies – SQL Developer",
+    "category": "Private",
+    "experience": "Experienced",
+    "location": "Bengaluru, India",
+    "last_date": "18-01-2026",
+    "description": "Recruiting database developers with strong SQL and PL/SQL optimization skills.",
+    "link": "https://www.tcsion.com/job-openings/"
+  },
+  {
+    "id": "NAT20012026",
+    "title": "NatWest Group – Software Engineer",
+    "category": "Private",
+    "experience": "Experienced",
+    "location": "Gurugram, India",
+    "last_date": "20-01-2026",
+    "description": "Hiring for digital engineering teams; requires 3-6 years in full-stack development.",
+    "link": "https://jobs.natwestgroup.com/search/jobs/in/country/india"
+  },
+  {
+    "id": "ZOM02012026",
+    "title": "Zomato – SDE II (Backend)",
+    "category": "Private",
+    "experience": "Experienced",
+    "location": "Gurgaon, India",
+    "last_date": "02-01-2026",
+    "description": "Backend engineering role requiring 2-5 years of experience in scalable systems.",
+    "link": "https://www.zomato.com/careers"
+  },
+  {
+    "id": "AIR07012026",
+    "title": "Airtel – Product Manager",
+    "category": "Private",
+    "experience": "Experienced",
+    "location": "Gurgaon, India",
+    "last_date": "07-01-2026",
+    "description": "MBA graduates with 2-4 years of experience in digital product management.",
+    "link": "https://www.airtel.in/careers"
+  },
+  {
+    "id": "WEB15022026",
+    "title": "Webaxis – Python Developer",
+    "category": "Private",
+    "experience": "Experienced",
+    "location": "Bengaluru, India",
+    "last_date": "15-02-2026",
+    "description": "Seeking Python/Django developers with 3+ years of web development experience.",
+    "link": "https://www.tcsion.com/job-openings/"
+  },
+  {
+    "id": "JPM31122025",
+    "title": "J.P. Morgan – Software Engineer Associate",
+    "category": "Private",
+    "experience": "Experienced",
+    "location": "Mumbai/Bangalore",
+    "last_date": "31-12-2025",
+    "description": "Developing financial apps; requires 1-3 years of experience in Java or React.",
+    "link": "https://careers.jpmorgan.com/"
+  },
+  {
+    "id": "EY005012026",
+    "title": "EY – Tax Consultant",
+    "category": "Private",
+    "experience": "Experienced",
+    "location": "Kochi/Bangalore",
+    "last_date": "05-01-2026",
+    "description": "CA/MBA graduates with 2-5 years in corporate tax and compliance.",
+    "link": "https://www.ey.com/en_in/careers"
+  },
+  {
+    "id": "VIC20012026",
+    "title": "Vodafone Idea – Graduate Engineer Trainee",
+    "category": "Private",
+    "experience": "Freshers",
+    "location": "Multiple Cities, India",
+    "last_date": "20-01-2026",
+    "description": "Freshers hiring for 5G network deployment and telecom infrastructure.",
+    "link": "https://www.myvi.in/careers"
+  },
+  {
+    "id": "SAA25022026",
+    "title": "Saatvik Solutions – Application Engineer Trainee",
+    "category": "Private",
+    "experience": "Freshers",
+    "location": "Bengaluru, India",
+    "last_date": "25-02-2026",
+    "description": "Entry-level technical role for fresh graduates in software application support.",
+    "link": "https://www.tcsion.com/job-openings/"
+  }
+]

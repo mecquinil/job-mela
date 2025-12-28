@@ -45,40 +45,56 @@ const params = new URLSearchParams(window.location.search);
 const jobId = params.get("id");
 
 async function loadJobDetails() {
-    const res = await fetch("data/jobs.json?v=" + Date.now());
-    const jobs = await res.json();
+    try {
+        // ✅ FETCH BOTH JSON FILES
+        const [govtRes, privateRes] = await Promise.all([
+            fetch("data/govt-jobs.json?v=" + Date.now()),
+            fetch("data/private-jobs.json?v=" + Date.now())
+        ]);
 
-    const job = jobs[jobs.findIndex(j => j.id == jobId)];
+        const govtJobs = await govtRes.json();
+        const privateJobs = await privateRes.json();
 
-    if (!job) {
-        document.body.innerHTML = "<h2>Job not found</h2>";
-        return;
+        // ✅ MERGE BOTH
+        const allJobs = [...govtJobs, ...privateJobs];
+
+        // ✅ FIND JOB BY ID
+        const job = allJobs.find(j => j.id === jobId);
+
+        if (!job) {
+            document.body.innerHTML = "<h2>Job not found</h2>";
+            return;
+        }
+
+        // Title
+        document.getElementById("jobTitle").innerText = job.title;
+
+        // Metadata table
+        document.getElementById("jobMetaTable").innerHTML = `
+            <tr>
+                <td>Category</td>
+                <td>${job.category}</td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td>${job.location}</td>
+            </tr>
+            <tr>
+                <td>Last Date</td>
+                <td>${job.last_date}</td>
+            </tr>
+        `;
+
+        // Description
+        document.getElementById("jobDescription").innerText = job.description;
+
+        // Apply button
+        document.getElementById("applyBtn").href = job.link;
+
+    } catch (err) {
+        console.error(err);
+        document.body.innerHTML = "<h2>Error loading job details</h2>";
     }
-
-    // Title
-    document.getElementById("jobTitle").innerText = job.title;
-
-    // Metadata table
-    document.getElementById("jobMetaTable").innerHTML = `
-        <tr>
-            <td>Category</td>
-            <td>${job.category}</td>
-        </tr>
-        <tr>
-            <td>Location</td>
-            <td>${job.location}</td>
-        </tr>
-        <tr>
-            <td>Last Date</td>
-            <td>${job.last_date}</td>
-        </tr>
-    `;
-
-    // Description
-    document.getElementById("jobDescription").innerText = job.description;
-
-    // Apply button
-    document.getElementById("applyBtn").href = job.link;
 }
 
 loadJobDetails();

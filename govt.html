@@ -29,13 +29,11 @@
     </div>
 </div>
 
-
 <script>
   const now = new Date();
   const formatted = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
   document.getElementById("lastUpdated").innerText = formatted;
 </script>
-
 
 <section class="hero">
   <div class="container">
@@ -44,7 +42,7 @@
     </h2>
     </div>
 </section>
- 
+
 <div class="filter-bar">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="Freshers">Freshers</button>
@@ -65,14 +63,15 @@
 
 <script>
 /* ===============================
-   FILTER FIX — ONLY CHANGES BELOW
+   ONLY REQUIRED CHANGES BELOW
 ================================ */
 
 let govtJobsCache = [];
 
 async function loadGovtJobs() {
   try {
-    const res = await fetch('data/jobs.json?v=' + Date.now());
+    // CHANGED: fetch govt-only JSON
+    const res = await fetch('data/govt-jobs.json?v=' + Date.now());
     const jobs = await res.json();
 
     const container = document.querySelector('.job-section .container');
@@ -80,19 +79,16 @@ async function loadGovtJobs() {
     // Remove existing job cards
     container.querySelectorAll('.job-card').forEach(el => el.remove());
 
-    // Filter only govt jobs
-    const govtJobs = jobs.filter(job => job.category.toLowerCase() === "govt");
+    // CHANGED: no category filtering needed anymore
+    govtJobsCache = jobs;
 
-    // CACHE FOR FILTERING
-    govtJobsCache = govtJobs;
-
-    govtJobs.forEach(job => {
+    govtJobsCache.forEach(job => {
       const card = document.createElement('div');
       card.className = 'job-card';
       card.innerHTML = `
         <div class="job-head">
           <h3>${job.title}</h3>
-          <span class="tag">${job.category}</span>
+          <span class="tag">Govt</span>
         </div>
         <p>${job.location ? job.location + ' • ' : ''} ${job.last_date ? 'Last Date: ' + job.last_date : ''}</p>
         <p>${job.description}</p>
@@ -108,7 +104,7 @@ async function loadGovtJobs() {
 
 window.addEventListener('DOMContentLoaded', loadGovtJobs);
 
-/* FIXED FILTER LOGIC */
+/* EXISTING FILTER LOGIC — UNCHANGED */
 const filterButtons = document.querySelectorAll(".filter-btn");
 
 filterButtons.forEach(btn => {
@@ -127,18 +123,17 @@ filterButtons.forEach(btn => {
         ? govtJobsCache
         : govtJobsCache.filter(job => job.experience === filter);
 
-      // Remove old "No jobs found" message if exists
-const oldMsg = container.querySelector(".no-jobs-msg");
-if (oldMsg) oldMsg.remove();
+    // Remove old "No jobs found" message if exists
+    const oldMsg = container.querySelector(".no-jobs-msg");
+    if (oldMsg) oldMsg.remove();
 
-if (jobsToShow.length === 0) {
-  const msg = document.createElement("p");
-  msg.className = "no-jobs-msg";
-  msg.innerText = "No jobs found.";
-  container.appendChild(msg);
-  return;
-}
-
+    if (jobsToShow.length === 0) {
+      const msg = document.createElement("p");
+      msg.className = "no-jobs-msg";
+      msg.innerText = "No jobs found.";
+      container.appendChild(msg);
+      return;
+    }
 
     jobsToShow.forEach(job => {
       const card = document.createElement('div');
@@ -146,7 +141,7 @@ if (jobsToShow.length === 0) {
       card.innerHTML = `
         <div class="job-head">
           <h3>${job.title}</h3>
-          <span class="tag">${job.category}</span>
+          <span class="tag">Govt</span>
         </div>
         <p>${job.location ? job.location + ' • ' : ''} ${job.last_date ? 'Last Date: ' + job.last_date : ''}</p>
         <p>${job.description}</p>
