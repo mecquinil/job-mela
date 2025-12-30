@@ -24,6 +24,6 @@ Netlify (hosting & deployment)
 
 This project is intentionally built without any backend or frameworks to keep it simple and highly maintainable.
 
-👤**Author**
+👤**Author**/n
 Job Mela is developed and maintained by
 Sumedh Mulasavalagi
